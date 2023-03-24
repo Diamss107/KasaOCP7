@@ -1,6 +1,6 @@
-import styles from '../style/banner.module.scss';
-import homeStyles from '../style/homebanner.module.scss';
-import aproposStyles from '../style/aproposbanner.module.scss';
+import styles from '../style/components/banner.module.scss';
+import homeStyles from '../style/components/homebanner.module.scss';
+import aproposStyles from '../style/components/aproposbanner.module.scss';
 import { AppProps } from '../types/globals';
 
 interface BannerProps extends AppProps {

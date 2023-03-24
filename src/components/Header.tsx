@@ -1,5 +1,5 @@
 import logoImg from '../images/logo.png';
-import styles from '../style/header.module.scss';
+import styles from '../style/components/header.module.scss';
 import { Link } from 'react-router-dom';
 
 type Link = {

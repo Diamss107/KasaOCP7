@@ -1,4 +1,4 @@
-import styles from '../style/home.module.scss';
+import styles from '../style/pages/home.module.scss';
 import { Banner } from '../components/Banner';
 import { LocationCard } from '../components/LocationCard';
 import logements from '../data/logements.json';
