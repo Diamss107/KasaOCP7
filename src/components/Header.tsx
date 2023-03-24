@@ -1,7 +1,35 @@
-import logoImg from '../images/logo.png'
+import logoImg from '../images/logo.png';
 import styles from '../style/header.module.scss';
+import { Link } from 'react-router-dom';
+
+type Link = {
+	name: string;
+	route: string;
+	className: string;
+};
 
 export function Header() {
+	const links: Link[] = [
+		{
+			name: 'Accueil',
+			route: '/',
+			className: styles.header__nav__list__link,
+		},
+		{
+			name: 'A Propos',
+			route: '/apropos',
+			className: styles.header__nav__list__link,
+		},
+	];
+
+	for (const link of links) {
+		if (window.location.pathname === link.route) {
+			link.className = styles.header__nav__list__linkActive;
+		} else {
+			link.className = styles.header__nav__list__link;
+		}
+	}
+
 	return (
 		<div className={styles.header}>
 			<img
@@ -11,8 +39,13 @@ export function Header() {
 			/>
 			<nav className={styles.header__nav}>
 				<ul className={styles.header__nav__list}>
-					<li className={styles.header__nav__list__link}>Accueil</li>
-					<li className={styles.header__nav__list__link}>A Propos</li>
+					{links.map((link) => {
+						return (
+							<li key={link.route} className={link.className}>
+								<Link to={link.route}>{link.name}</Link>
+							</li>
+						);
+					})}
 				</ul>
 			</nav>
 		</div>

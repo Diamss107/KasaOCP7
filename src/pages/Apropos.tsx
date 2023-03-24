@@ -1,3 +1,9 @@
+import { Banner } from '../components/Banner';
+
 export function Apropos() {
-	return <h1>A propos</h1>;
+	return (
+		<div>
+			<Banner page='apropos'></Banner>
+		</div>
+	);
 }

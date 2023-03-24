@@ -27,9 +27,18 @@
       align-items: center;
 
       &__link {
-        color: $primaryColor;
         font-size: 24px;
         font-weight: normal;
+        &Active a {
+            font-size: 24px;
+            font-weight: normal;
+            color: $primaryColor;
+            text-decoration: underline;
+        }
+        a {
+          color: $primaryColor;
+          text-decoration: none;
+        }
       }
     }
   }
