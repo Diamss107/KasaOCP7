@@ -29,8 +29,9 @@
 		margin: 0;
 		padding: 15px;
 		border-bottom-left-radius: $borderRadius;
+		border-top-right-radius: $borderRadius;
 
-		background-color: black;
+		background-color: rgba(black, 0.5);
 		position: absolute;
 		font-size: 18px;
 		font-weight: normal;

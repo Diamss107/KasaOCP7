@@ -1,6 +1,7 @@
 import logoImg from '../images/logo.png';
 import styles from '../style/components/header.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useHref, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 type Link = {
 	name: string;
@@ -42,7 +43,7 @@ export function Header() {
 					{links.map((link) => {
 						return (
 							<li key={link.route} className={link.className}>
-								<Link to={link.route}>{link.name}</Link>
+								<NavLink to={link.route}>{link.name}</NavLink>
 							</li>
 						);
 					})}

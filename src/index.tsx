@@ -1,12 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { FicheLogement } from './pages/FicheLogement';
 import { Apropos } from './pages/Apropos';
 import './style/base.scss';
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: (
+			<>
+				<Header />
+				<Home />
+				<Footer />
+			</>
+		),
+	},
+	{
+		path: '/fichelogement',
+		element: (
+			<>
+				<Header />
+				<FicheLogement />
+				<Footer />
+			</>
+		),
+	},
+	{
+		path: '/apropos',
+		element: (
+			<>
+				<Header />
+				<Apropos />
+				<Footer />
+			</>
+		),
+	},
+]);
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') ??
@@ -16,14 +49,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<React.StrictMode>
-		<Router>
-			<Header />
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/fichelogement' element={<FicheLogement />} />
-				<Route path='/apropos' element={<Apropos />} />
-			</Routes>
-			<Footer />
-		</Router>
+		<RouterProvider router={router} />
 	</React.StrictMode>
 );
