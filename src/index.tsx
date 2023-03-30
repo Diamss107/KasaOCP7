@@ -7,6 +7,7 @@ import { Home } from './pages/Home';
 import { FicheLogement } from './pages/FicheLogement';
 import { Apropos } from './pages/Apropos';
 import './style/base.scss';
+import { ErrorPage } from './pages/ErrorPage';
 
 const router = createBrowserRouter([
 	{
@@ -15,6 +16,13 @@ const router = createBrowserRouter([
 			<>
 				<Header />
 				<Home />
+				<Footer />
+			</>
+		),
+		errorElement: (
+			<>
+				<Header />
+				<ErrorPage />
 				<Footer />
 			</>
 		),

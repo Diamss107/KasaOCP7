@@ -1,16 +1,15 @@
 import logoImg from '../images/logo.png';
 import styles from '../style/components/header.module.scss';
-import { Link, NavLink, useHref, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
-type Link = {
+type HeaderLink = {
 	name: string;
 	route: string;
 	className: string;
 };
 
 export function Header() {
-	const links: Link[] = [
+	const links: HeaderLink[] = [
 		{
 			name: 'Accueil',
 			route: '/',
