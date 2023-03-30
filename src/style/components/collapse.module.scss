@@ -8,7 +8,7 @@
 
 		.dropdown__desc {
 			visibility: unset;
-			height: auto;
+			max-height: 150px;
 			padding: 30px 20px 10px;
 		}
 
@@ -47,7 +47,8 @@
 		overflow: hidden;
 		color: $primaryColor;
 		transition: 300ms;
-		height: 0;
+		height: auto;
+		max-height: 0;
 		font-size: 1.5em;
 		background-color: #f6f6f6;
 		border: 5px;

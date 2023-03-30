@@ -32,11 +32,13 @@ export function Header() {
 
 	return (
 		<div className={styles.header}>
-			<img
-				src={logoImg}
-				alt='Le logo de Kasa'
-				className={styles.header__logo}
-			/>
+			<NavLink to={'/'} className={styles.header__logo}>
+				<img
+					src={logoImg}
+					alt='Le logo de Kasa'
+					className={styles.header__logo}
+				/>
+			</NavLink>
 			<nav className={styles.header__nav}>
 				<ul className={styles.header__nav__list}>
 					{links.map((link) => {

@@ -1,0 +1,53 @@
+.ficheLogement {
+	&__carrousel {
+		position: relative;
+		display: flex;
+		color: white;
+
+		&__currentImg {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+			background-color: rgba(black, 0.5);
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+			padding: 10px 10px 20px;
+		}
+
+		&__arrow {
+			position: absolute;
+			background-color: rgba(black, 0.5);
+			padding: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 5em;
+
+			&:hover {
+				cursor: pointer;
+				background-color: rgba(black, 0.7);
+			}
+
+			&Left {
+				left: 0;
+				padding-left: 10px;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+
+			&Right {
+				padding-right: 10px;
+				right: 0;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+		}
+
+		&__img {
+			width: 1240px;
+			height: 415px;
+			object-fit: cover;
+			border-radius: 25px;
+		}
+	}
+}
