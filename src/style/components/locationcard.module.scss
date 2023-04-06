@@ -3,11 +3,13 @@
 .card {
 	$borderRadius: 10px;
 	$size: 340px;
+	$darkenColor: darken($primaryColor, 5%);
+	$mostDarkenColor: darken($primaryColor, 100%);
+
+	position: relative;
 	width: $size;
 	height: $size;
 	border-radius: $borderRadius;
-	$darkenColor: darken($primaryColor, 5%);
-	$mostDarkenColor: darken($primaryColor, 100%);
 	background: linear-gradient(to top,
 		rgba($mostDarkenColor, 1) -50%,
 		rgba($primaryColor, 1) 50%,
@@ -35,6 +37,6 @@
 		position: absolute;
 		font-size: 18px;
 		font-weight: normal;
-		width: 140px;
+		max-width: 50%;
 	}
 }
