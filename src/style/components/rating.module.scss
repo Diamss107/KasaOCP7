@@ -1,0 +1,18 @@
+@import "../variables.scss";
+
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.7rem;
+
+	&__fulfilledStar {
+		color: $primaryColor;
+		margin: 0 0.25rem;
+	}
+
+	&__emptyStar {
+		color: #e3e3e3;
+		margin: 0 0.25rem;
+	}
+}

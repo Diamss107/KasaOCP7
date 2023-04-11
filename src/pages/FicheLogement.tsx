@@ -5,6 +5,8 @@ import { Logement } from '../types/globals';
 import { Carousel } from '../components/Carousel';
 import { Avatar } from '../components/Avatar';
 import { Tag } from '../components/Tag';
+import { Rating } from '../components/Rating';
+import { Collapse } from '../components/Collapse';
 
 export function FicheLogement() {
 	const currentLogementId = useLocation().pathname.split(':')[1];
@@ -38,6 +40,20 @@ export function FicheLogement() {
 							<Tag key={tag}>{tag}</Tag>
 						))}
 					</div>
+					<Rating stars={Number(currentLogement.rating)} maxStars={5} />
+				</div>
+				<div className={styles.ficheLogement__infos}>
+					<Collapse title={'Description'}>
+						{currentLogement.description}
+					</Collapse>
+					<Collapse title={'Equipements'}>
+						{currentLogement.equipments.map((equipment) => (
+							<>
+								<span key={equipment}>{equipment}</span>
+								<br />
+							</>
+						))}
+					</Collapse>
 				</div>
 			</div>
 		</div>

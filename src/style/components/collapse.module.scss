@@ -1,18 +1,19 @@
 @import "src/style/variables";
 
-.dropdown {
+.collapse {
 	transition: 400ms;
 	margin: 25px 0;
+	flex: 33;
 
 	&Open {
 
-		.dropdown__desc {
+		.collapse__desc {
 			visibility: unset;
-			max-height: 150px;
+			max-height: 250px;
 			padding: 30px 20px 10px;
 		}
 
-		.dropdown__header__icon {
+		.collapse__header__icon {
 			transform: rotate(180deg);
 		}
 	}
@@ -29,7 +30,10 @@
 		height: 50px;
 		border-radius: 5px;
 		padding: 0 20px;
-		font-weight: normal;
+
+		h2 {
+			font-weight: normal;
+		}
 
 		&:hover {
 			background-color: lighten($primaryColor, 2%);
@@ -46,7 +50,7 @@
 		visibility: hidden;
 		overflow: hidden;
 		color: $primaryColor;
-		transition: 300ms;
+		transition: 400ms;
 		height: auto;
 		max-height: 0;
 		font-size: 1.5em;
@@ -55,7 +59,7 @@
 		margin-top: -10px;
 
 		p {
-			margin: 0;
+			margin: 15px 0 0;
 		}
 	}
 }

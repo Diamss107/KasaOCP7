@@ -11,26 +11,26 @@ interface DropdownProps extends AppProps {
 export function Collapse(props: DropdownProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
-	let dropdownClass = '';
+	let collapseClass = '';
 
 	if (isOpen) {
-		dropdownClass = styles.dropdownOpen;
+		collapseClass = styles.collapseOpen;
 	}
 
 	return (
-		<div className={styles.dropdown + ' ' + dropdownClass}>
+		<div className={styles.collapse + ' ' + collapseClass}>
 			<div
-				className={styles.dropdown__header}
+				className={styles.collapse__header}
 				onClick={() => {
 					setIsOpen(!isOpen);
 				}}>
 				<h2>{props.title}</h2>
 				<FontAwesomeIcon
 					icon={solid('chevron-down')}
-					className={styles.dropdown__header__icon}
+					className={styles.collapse__header__icon}
 				/>
 			</div>
-			<div className={styles.dropdown__desc}>
+			<div className={styles.collapse__desc}>
 				<p>{props.children}</p>
 			</div>
 		</div>

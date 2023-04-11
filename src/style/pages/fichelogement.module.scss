@@ -29,6 +29,9 @@
 		}
 
 		&__tagAndStars {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
 			margin-top: 20px;
 
 			&__tags {
@@ -36,5 +39,14 @@
 				flex-wrap: wrap;
 			}
 		}
+	}
+
+	&__infos {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__infos > div:last-child {
+		margin-left: 75px;
 	}
 }
