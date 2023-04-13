@@ -1,11 +1,12 @@
 import styles from '../style/components/collapse.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AppProps } from '../types/globals';
 
 interface DropdownProps extends AppProps {
 	title: string;
+	height?: string;
 }
 
 export function Collapse(props: DropdownProps) {
@@ -16,6 +17,8 @@ export function Collapse(props: DropdownProps) {
 	if (isOpen) {
 		collapseClass = styles.collapseOpen;
 	}
+
+	// let style: React.CSSProperties = { height: props.height || 'auto' };
 
 	return (
 		<div className={styles.collapse + ' ' + collapseClass}>
@@ -30,9 +33,7 @@ export function Collapse(props: DropdownProps) {
 					className={styles.collapse__header__icon}
 				/>
 			</div>
-			<div className={styles.collapse__desc}>
-				<p>{props.children}</p>
-			</div>
+			<div className={styles.collapse__desc}>{props.children}</div>
 		</div>
 	);
 }

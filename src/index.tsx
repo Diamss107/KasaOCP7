@@ -19,13 +19,7 @@ const router = createBrowserRouter([
 				<Footer />
 			</>
 		),
-		errorElement: (
-			<>
-				<Header />
-				<ErrorPage />
-				<Footer />
-			</>
-		),
+		ErrorBoundary: ErrorPage,
 	},
 	{
 		path: '/fichelogement/:id',
