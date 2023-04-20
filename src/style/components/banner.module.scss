@@ -1,16 +1,37 @@
-.banner {
-  height: 223px;
-  border-radius: 25px;
-  background-position: center;
+@import "../mixins.scss";
 
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    color: white;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(black, 0.3);
-  }
+.banner {
+	height: 223px;
+	border-radius: 25px;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 48px;
+		font-weight: normal;
+		color: white;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(black, 0.3);
+		margin: 0;
+	}
+}
+
+@include for-phone-and-tablet {
+	.banner {
+		height: 110px;
+		border-radius: 10px;
+
+		&__title {
+			font-size: 24px;
+			padding-left: 15px;
+			text-align: left;
+		}
+	}
 }

@@ -1,4 +1,5 @@
-@import "src/style/variables";
+@import "../variables";
+@import "../mixins";
 
 .footer {
 	background-color: black;
@@ -8,7 +9,7 @@
 	align-items: center;
 	justify-content: space-evenly;
 	height: 210px;
-	margin: 0 (-$defaultPaddingX);
+	margin: 0 -6%;
 
 	span {
 		font-size: 20px;
@@ -17,5 +18,11 @@
 	&__logo {
 		width: 125px;
 		height: 40px;
+	}
+}
+
+@include for-phone-and-tablet {
+	.footer {
+		//margin: 0 -$phonePaddingX;
 	}
 }

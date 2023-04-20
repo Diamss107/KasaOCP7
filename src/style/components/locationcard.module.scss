@@ -1,4 +1,5 @@
-@import "src/style/variables";
+@import "../variables.scss";
+@import "../mixins.scss";
 
 .card {
 	$borderRadius: 10px;
@@ -38,5 +39,11 @@
 		font-size: 18px;
 		font-weight: normal;
 		max-width: 50%;
+	}
+}
+
+@include for-phone-and-tablet {
+	.card {
+		margin: 15px 0;
 	}
 }

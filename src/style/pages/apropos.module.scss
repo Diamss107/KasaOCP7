@@ -1,5 +1,15 @@
+@import "../mixins";
+
 .apropos {
 	&__infos {
 		padding: 20px 100px;
+	}
+}
+
+@include for-phone-and-tablet {
+	.apropos {
+		&__infos {
+			padding: 0;
+		}
 	}
 }
