@@ -16,16 +16,9 @@ body {
 
 #root {
 	margin: 0 auto;
-	padding: $defaultPaddingY $defaultPaddingX 0;
 
 	min-height: 100vh;
 	height: 100%;
 	position: relative;
-	overflow: hidden;
-}
-
-@include for-phone-and-tablet {
-	#root {
-		padding: $phonePaddingY $phonePaddingX 0;
-	}
+	//overflow: hidden;
 }

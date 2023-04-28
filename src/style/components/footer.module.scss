@@ -23,10 +23,3 @@
 		height: 40px;
 	}
 }
-
-@include for-phone-and-tablet {
-	.footer {
-		margin-left: -10vw;
-		width: 110vw;
-	}
-}

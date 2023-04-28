@@ -6,7 +6,6 @@ import { AppProps } from '../types/globals';
 
 interface DropdownProps extends AppProps {
 	title: string;
-	height?: string;
 }
 
 export function Collapse(props: DropdownProps) {
