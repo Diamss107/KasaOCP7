@@ -1,10 +1,12 @@
 @import '../variables.scss';
+@import '../mixins.scss';
 
 .tag {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-right: 10px;
+	margin-top: 5px;
 
 	background-color: $primaryColor;
 	border-radius: 10px;
@@ -15,5 +17,18 @@
 
 	&__text {
 		font-size: 14px;
+	}
+}
+
+@include for-phone-and-tablet {
+	.tag {
+		height: 18px;
+		border-radius: 5px;
+		padding: 0 10px;
+		min-width: 50px;
+
+		&__text {
+			font-size: 10px;
+		}
 	}
 }

@@ -1,44 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { FicheLogement } from './pages/FicheLogement';
 import { Apropos } from './pages/Apropos';
 import './style/base.scss';
 import { ErrorPage } from './pages/ErrorPage';
+import { Layout } from './components/Layout';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: (
-			<>
-				<Header />
+			<Layout>
 				<Home />
-				<Footer />
-			</>
+			</Layout>
 		),
 		ErrorBoundary: ErrorPage,
 	},
 	{
 		path: '/fichelogement/:id',
 		element: (
-			<>
-				<Header />
+			<Layout>
 				<FicheLogement />
-				<Footer />
-			</>
+			</Layout>
 		),
 	},
 	{
 		path: '/apropos',
 		element: (
-			<>
-				<Header />
+			<Layout>
 				<Apropos />
-				<Footer />
-			</>
+			</Layout>
 		),
 	},
 ]);

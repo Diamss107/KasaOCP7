@@ -1,4 +1,5 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .rating {
 	display: flex;
@@ -14,5 +15,11 @@
 	&__emptyStar {
 		color: #e3e3e3;
 		margin: 0 0.25rem;
+	}
+}
+
+@include for-phone-and-tablet {
+	.rating {
+		font-size: 1rem;
 	}
 }

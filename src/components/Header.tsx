@@ -31,7 +31,7 @@ export function Header() {
 	}
 
 	return (
-		<div className={styles.header}>
+		<header className={styles.header}>
 			<NavLink to={'/'} className={styles.header__logo}>
 				<img
 					src={logoImg}
@@ -50,6 +50,6 @@ export function Header() {
 					})}
 				</ul>
 			</nav>
-		</div>
+		</header>
 	);
 }

@@ -2,6 +2,8 @@
 @import "../mixins";
 
 .footer {
+	position: absolute;
+	bottom: 0;
 	background-color: black;
 	color: white;
 	display: flex;
@@ -9,7 +11,8 @@
 	align-items: center;
 	justify-content: space-evenly;
 	height: 210px;
-	margin: 0 -6%;
+	width: 100%;
+
 
 	span {
 		font-size: 20px;
@@ -23,6 +26,7 @@
 
 @include for-phone-and-tablet {
 	.footer {
-		//margin: 0 -$phonePaddingX;
+		margin-left: -10vw;
+		width: 110vw;
 	}
 }

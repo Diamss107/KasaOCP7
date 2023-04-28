@@ -1,4 +1,5 @@
-@import "src/style/variables";
+@import "../variables";
+@import "../mixins";
 
 .collapse {
 	transition: 400ms;
@@ -9,12 +10,12 @@
 
 		.collapse__desc {
 			visibility: unset;
-			max-height: 250px;
+			max-height: 1000px;
 			padding: 30px 20px 10px;
 		}
 
 		.collapse__header__icon {
-			transform: rotate(180deg);
+			transform: rotate(-180deg);
 		}
 	}
 
@@ -60,6 +61,35 @@
 
 		p {
 			margin: 15px 0 0;
+		}
+	}
+}
+
+@include for-phone-and-tablet {
+	.collapse {
+		margin: 15px 0;
+
+		&Open {
+
+			.collapse__desc {
+				padding: 15px 10px 5px;
+			}
+		}
+
+		&__header {
+			height: 30px;
+
+			h2 {
+				font-size: 13px
+			}
+
+			&__icon {
+				font-size: 1em;
+			}
+		}
+
+		&__desc {
+			font-size: 12px;
 		}
 	}
 }

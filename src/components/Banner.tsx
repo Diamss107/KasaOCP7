@@ -9,7 +9,6 @@ interface BannerProps extends AppProps {
 
 export function Banner(props: BannerProps) {
 	let backgroundImg = homeStyles.banner__img;
-
 	if (props.page === 'home') {
 		backgroundImg = homeStyles.banner__img;
 	} else if (props.page === 'apropos') {
