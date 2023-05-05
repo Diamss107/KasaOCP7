@@ -21,9 +21,11 @@ export function Rating(props: RatingProps) {
 					key={index}
 					icon={solid('star')}
 					className={
-						index < props.stars
-							? styles.rating__fulfilledStar
-							: styles.rating__emptyStar
+						styles.rating__star +
+						' ' +
+						(index < props.stars
+							? styles.rating__starFulfilled
+							: styles.rating__starEmpty)
 					}
 				/>
 			))}

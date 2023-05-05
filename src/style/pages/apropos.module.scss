@@ -1,6 +1,14 @@
 @import "../mixins";
 
 .apropos {
+
+	// Temporaire
+	&__banner {
+		&__img {
+			background-image: url("../../images/aproposBanner.jpg");
+		}
+	}
+
 	&__infos {
 		padding: 20px 100px;
 	}

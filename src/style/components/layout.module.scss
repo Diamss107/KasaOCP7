@@ -1,0 +1,16 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.layout {
+	&__page {
+		padding: $defaultPaddingY $defaultPaddingX 210px;
+	}
+}
+
+@include for-phone-and-tablet {
+	.layout {
+		&__page {
+			padding: $phonePaddingY $phonePaddingX 210px;
+		}
+	}
+}

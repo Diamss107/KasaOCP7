@@ -13,7 +13,7 @@ export function LocationCard(props: LocationCardProps) {
 			className={styles.card}>
 			<img
 				src={props.logement.cover}
-				alt='Logement'
+				alt='Vue du logement'
 				className={styles.card__img}
 			/>
 			<h2 className={styles.card__name}>{props.children}</h2>

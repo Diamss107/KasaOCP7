@@ -2,12 +2,10 @@
 @import "../mixins";
 
 .collapse {
-	transition: 400ms;
 	margin: 25px 0;
-	flex: 33;
+	flex: 50;
 
 	&Open {
-
 		.collapse__desc {
 			visibility: unset;
 			max-height: 1000px;
@@ -21,14 +19,15 @@
 
 	&__header {
 		position: relative;
-		z-index: 5;
+		z-index: 2;
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		color: white;
 		background-color: $primaryColor;
-		height: 50px;
+		// 50px
+		height: 3.13em;
 		border-radius: 5px;
 		padding: 0 20px;
 
@@ -70,17 +69,17 @@
 		margin: 15px 0;
 
 		&Open {
-
 			.collapse__desc {
 				padding: 15px 10px 5px;
 			}
 		}
 
 		&__header {
-			height: 30px;
+			// 30px
+			height: 1.9em;
 
 			h2 {
-				font-size: 13px
+				font-size: 0.8em;
 			}
 
 			&__icon {
@@ -89,7 +88,7 @@
 		}
 
 		&__desc {
-			font-size: 12px;
+			font-size: 0.75em;
 		}
 	}
 }

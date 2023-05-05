@@ -5,53 +5,51 @@ import { useState } from 'react';
 import { AppProps } from '../types/globals';
 
 interface CarouselProps extends AppProps {
-	pictures: string[];
+	images: string[];
 }
 
 export function Carousel(props: CarouselProps) {
-	const [currentPicture, _setCurrentPicture] = useState(0);
+	const [currentImage, _setCurrentImage] = useState(0);
 
-	function setCurrentPicture(index: number) {
+	function setCurrentImage(index: number) {
 		if (index < 0) {
-			index = props.pictures.length - 1;
-		} else if (index >= props.pictures.length) {
+			index = props.images.length - 1;
+		} else if (index >= props.images.length) {
 			index = 0;
 		}
 
-		_setCurrentPicture(index);
+		_setCurrentImage(index);
 	}
 
-	let hasMultiplePictures = props.pictures.length > 1;
+	let hasMultipleImages = props.images.length > 1;
 
 	return (
 		<div className={styles.carrousel}>
-			{hasMultiplePictures && (
-				<FontAwesomeIcon
-					icon={solid('chevron-left')}
-					className={
-						styles.carrousel__arrow + ' ' + styles.carrousel__arrowLeft
-					}
-					onClick={() => setCurrentPicture(currentPicture - 1)}
-				/>
-			)}
 			<img
-				src={props.pictures[currentPicture]}
+				src={props.images[currentImage]}
 				alt='Logement'
 				className={styles.carrousel__img}
 			/>
-			{hasMultiplePictures && (
-				<span className={styles.carrousel__currentImg}>
-					{currentPicture + 1 + '/' + props.pictures.length}
-				</span>
-			)}
-			{hasMultiplePictures && (
-				<FontAwesomeIcon
-					icon={solid('chevron-right')}
-					className={
-						styles.carrousel__arrow + ' ' + styles.carrousel__arrowRight
-					}
-					onClick={() => setCurrentPicture(currentPicture + 1)}
-				/>
+			{hasMultipleImages && (
+				<>
+					<FontAwesomeIcon
+						icon={solid('chevron-left')}
+						className={
+							styles.carrousel__arrow + ' ' + styles.carrousel__arrowLeft
+						}
+						onClick={() => setCurrentImage(currentImage - 1)}
+					/>
+					<span className={styles.carrousel__currentImgIndex}>
+						{currentImage + 1 + '/' + props.images.length}
+					</span>
+					<FontAwesomeIcon
+						icon={solid('chevron-right')}
+						className={
+							styles.carrousel__arrow + ' ' + styles.carrousel__arrowRight
+						}
+						onClick={() => setCurrentImage(currentImage + 1)}
+					/>
+				</>
 			)}
 		</div>
 	);

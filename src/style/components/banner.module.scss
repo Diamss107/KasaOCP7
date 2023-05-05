@@ -1,19 +1,27 @@
 @import "../mixins.scss";
 
 .banner {
-	height: 223px;
+	position: relative;
+	height: 14em /*223px*/
+;
 	border-radius: 25px;
 	background-position: center;
-	background-size: cover;
 	overflow: hidden;
 
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
-		font-size: 48px;
+		font-size: 3em;
 		font-weight: normal;
 		color: white;
 		width: 100%;
@@ -25,12 +33,12 @@
 
 @include for-phone-and-tablet {
 	.banner {
-		height: 110px;
+		height: 7em /*110px*/
+	;
 		border-radius: 10px;
 
 		&__title {
-			font-size: 24px;
-			padding-left: 15px;
+			font-size: 1.5em;
 			text-align: left;
 		}
 	}

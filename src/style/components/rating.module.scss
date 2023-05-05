@@ -5,21 +5,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.7rem;
+	font-size: 1.7em;
 
-	&__fulfilledStar {
-		color: $primaryColor;
-		margin: 0 0.25rem;
-	}
+	&__star {
+		margin: 0 4px;
 
-	&__emptyStar {
-		color: #e3e3e3;
-		margin: 0 0.25rem;
+		&Fulfilled {
+			color: $primaryColor;
+		}
+
+		&Empty {
+			color: #e3e3e3;
+		}
 	}
 }
 
 @include for-phone-and-tablet {
 	.rating {
-		font-size: 1rem;
+		font-size: 1em;
 	}
 }

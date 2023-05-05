@@ -2,15 +2,15 @@
 @import "../mixins.scss";
 
 .card {
-	$borderRadius: 10px;
-	$size: 340px;
+	// 340px
+	$size: 21.25em;
 	$darkenColor: darken($primaryColor, 5%);
 	$mostDarkenColor: darken($primaryColor, 100%);
 
 	position: relative;
 	width: $size;
 	height: $size;
-	border-radius: $borderRadius;
+	border-radius: 10px;
 	background: linear-gradient(to top,
 		rgba($mostDarkenColor, 1) -50%,
 		rgba($primaryColor, 1) 50%,
@@ -20,9 +20,9 @@
 
 	display: flex;
 	align-items: flex-end;
+	overflow: hidden;
 
 	&__img {
-		border-radius: $borderRadius;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -31,12 +31,11 @@
 	&__name {
 		margin: 0;
 		padding: 15px;
-		border-bottom-left-radius: $borderRadius;
-		border-top-right-radius: $borderRadius;
+		border-top-right-radius: 10px;
 
-		background-color: rgba(black, 0.5);
+		background-color: $semiTransparentBC;
 		position: absolute;
-		font-size: 18px;
+		font-size: 1.125em;
 		font-weight: normal;
 		max-width: 50%;
 	}

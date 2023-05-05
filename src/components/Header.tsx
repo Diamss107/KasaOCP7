@@ -13,12 +13,12 @@ export function Header() {
 		{
 			name: 'Accueil',
 			route: '/',
-			className: styles.header__nav__list__link,
+			className: '',
 		},
 		{
 			name: 'A Propos',
 			route: '/apropos',
-			className: styles.header__nav__list__link,
+			className: '',
 		},
 	];
 
@@ -26,7 +26,7 @@ export function Header() {
 		if (window.location.pathname === link.route) {
 			link.className = styles.header__nav__list__linkActive;
 		} else {
-			link.className = styles.header__nav__list__link;
+			link.className = '';
 		}
 	}
 
@@ -43,7 +43,11 @@ export function Header() {
 				<ul className={styles.header__nav__list}>
 					{links.map((link) => {
 						return (
-							<li key={link.route} className={link.className}>
+							<li
+								key={link.route}
+								className={
+									styles.header__nav__list__link + ' ' + link.className
+								}>
 								<NavLink to={link.route}>{link.name}</NavLink>
 							</li>
 						);

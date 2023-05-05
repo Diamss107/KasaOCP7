@@ -11,16 +11,13 @@ interface DropdownProps extends AppProps {
 export function Collapse(props: DropdownProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
-	let collapseClass = '';
-
+	let isOpenClass = '';
 	if (isOpen) {
-		collapseClass = styles.collapseOpen;
+		isOpenClass = styles.collapseOpen;
 	}
 
-	// let style: React.CSSProperties = { height: props.height || 'auto' };
-
 	return (
-		<div className={styles.collapse + ' ' + collapseClass}>
+		<div className={styles.collapse + ' ' + isOpenClass} aria-expanded={isOpen}>
 			<div
 				className={styles.collapse__header}
 				onClick={() => {
@@ -32,7 +29,9 @@ export function Collapse(props: DropdownProps) {
 					className={styles.collapse__header__icon}
 				/>
 			</div>
-			<div className={styles.collapse__desc}>{props.children}</div>
+			<div className={styles.collapse__desc} aria-hidden={!isOpen}>
+				{props.children}
+			</div>
 		</div>
 	);
 }

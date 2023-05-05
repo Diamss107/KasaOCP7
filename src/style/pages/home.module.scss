@@ -3,6 +3,20 @@
 .home {
 	margin-top: 50px;
 
+	&__banner {
+		// Temporaire
+		&__img {
+			background-image: url("../../images/homeBanner.jpg");
+		}
+
+		&__title {
+			margin: 0;
+			padding: 0;
+			font-size: unset;
+			font-weight: unset;
+		}
+	}
+
 	&__locationCards {
 		display: flex;
 		flex-wrap: wrap;

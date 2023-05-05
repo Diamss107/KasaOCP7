@@ -8,6 +8,7 @@
 	justify-content: center;
 	color: $primaryColor;
 	margin-top: 150px;
+	padding-bottom: 210px;
 
 	&__infos {
 		display: flex;
@@ -16,20 +17,20 @@
 
 		&__title {
 			font-weight: bold;
-			font-size: 290px;
+			font-size: 18.15em;
 			margin: 0;
 		}
 
 		&__subtitle {
 			font-weight: 500;
-			font-size: 26px;
+			font-size: 1.64em;
 			margin: 0;
 		}
 	}
 
 	&__link {
 		color: $primaryColor;
-		font-size: 18px;
+		font-size: 1.125em;
 		margin-top: 150px;
 		margin-bottom: 125px;
 	}
@@ -39,16 +40,16 @@
 	.error {
 		&__infos {
 			&__title {
-				font-size: 96px;
+				font-size: 6em;
 			}
 
 			&__subtitle {
-				font-size: 18px;
+				font-size: 1.125em;
 			}
 		}
 
 		&__link {
-			font-size: 14px;
+			font-size: 0.9em;
 		}
 	}
 }

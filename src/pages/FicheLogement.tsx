@@ -1,14 +1,13 @@
 import styles from '../style/pages/fichelogement.module.scss';
 import { useLocation, useNavigate } from 'react-router';
+import type { Logement } from '../types/globals';
 import logements from '../data/logements.json';
-import { Logement } from '../types/globals';
 import { Carousel } from '../components/Carousel';
 import { Avatar } from '../components/Avatar';
 import { Tag } from '../components/Tag';
 import { Rating } from '../components/Rating';
 import { Collapse } from '../components/Collapse';
 import { useEffect } from 'react';
-//@ts-ignore
 import DocumentTitle from 'react-document-title';
 
 export function FicheLogement() {
@@ -17,11 +16,9 @@ export function FicheLogement() {
 	const currentLogementId = useLocation().pathname.split(':')[1];
 	let currentLogement: Logement | null = null;
 
-	for (const logement of logements) {
-		if (logement.id === currentLogementId) {
-			currentLogement = logement;
-		}
-	}
+	currentLogement =
+		logements.find((logement: Logement) => logement.id === currentLogementId) ??
+		null;
 
 	useEffect(() => {
 		if (currentLogement === null) {
@@ -30,23 +27,28 @@ export function FicheLogement() {
 	});
 
 	return (
-		<DocumentTitle title={(currentLogement?.title ?? '404') + ' - KASA'}>
+		<DocumentTitle title={currentLogement?.title ?? 'Logement non trouvé'}>
 			<div className={styles.ficheLogement}>
-				<Carousel pictures={currentLogement?.pictures ?? ['']} />
+				<Carousel images={currentLogement?.pictures ?? ['']} />
 				<div className={styles.ficheLogement__header}>
-					<div className={styles.ficheLogement__header__left}>
+					<div className={styles.ficheLogement__header__titleLocationAndTags}>
 						<div
-							className={styles.ficheLogement__header__left__titleAndLocation}>
+							className={
+								styles.ficheLogement__header__titleLocationAndTags__titleAndLocation
+							}>
 							<h1>{currentLogement?.title}</h1>
 							<span>{currentLogement?.location}</span>
 						</div>
-						<div className={styles.ficheLogement__header__left__tags}>
+						<div
+							className={
+								styles.ficheLogement__header__titleLocationAndTags__tags
+							}>
 							{currentLogement?.tags.map((tag) => (
 								<Tag key={tag}>{tag}</Tag>
 							))}
 						</div>
 					</div>
-					<div className={styles.ficheLogement__header__right}>
+					<div className={styles.ficheLogement__header__avatarAndRating}>
 						<Avatar
 							img={currentLogement?.host.picture ?? ''}
 							hostName={currentLogement?.host.name ?? ''}

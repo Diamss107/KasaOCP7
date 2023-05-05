@@ -2,12 +2,11 @@ import styles from '../style/pages/errorPage.module.scss';
 import { NavLink } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-//@ts-ignore
 import DocumentTitle from 'react-document-title';
 
 export function ErrorPage() {
 	return (
-		<DocumentTitle title='Page non touvée - KASA'>
+		<DocumentTitle title='Page non trouvée'>
 			<>
 				<Header />
 				<div className={styles.error}>
