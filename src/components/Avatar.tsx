@@ -10,7 +10,13 @@ export function Avatar(props: AvatarProps) {
 	return (
 		<div className={styles.avatar}>
 			<div className={styles.avatar__name}>{props.hostName}</div>
-			<img src={props.img} alt='Avatar' className={styles.avatar__img} />
+			<img
+				width={64}
+				height={64}
+				src={props.img}
+				alt={'Photo de profil de ' + props.hostName}
+				className={styles.avatar__img}
+			/>
 		</div>
 	);
 }

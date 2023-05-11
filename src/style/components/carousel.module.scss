@@ -17,13 +17,15 @@
 		padding: 10px 10px 20px;
 	}
 
-	&__arrow {
+	&__arrowButton {
 		position: absolute;
 		background-color: $semiTransparentBC;
 		padding: 5px;
 		top: 50%;
 		transform: translateY(-50%);
 		font-size: 5em;
+		color: inherit;
+		border: none;
 
 		&:hover {
 			cursor: pointer;
@@ -47,8 +49,7 @@
 
 	&__img {
 		width: 100%;
-		//415px
-		height: 26em;
+		height: 415px;
 		object-fit: cover;
 		border-radius: 25px;
 	}
@@ -56,11 +57,11 @@
 
 @include for-phone-and-tablet {
 	.carrousel {
-		&__currentImg {
+		&__currentImgIndex {
 			padding: 5px 5px 10px;
 		}
 
-		&__arrow {
+		&__arrowButton {
 			font-size: 2.5em;
 			padding: 2.5px;
 
@@ -74,8 +75,7 @@
 		}
 
 		&__img {
-			// 255px
-			height: 16em;
+			height: 255px;
 			border-radius: 10px;
 		}
 	}

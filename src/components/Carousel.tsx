@@ -26,29 +26,40 @@ export function Carousel(props: CarouselProps) {
 	return (
 		<div className={styles.carrousel}>
 			<img
+				id='current-carrousel-img'
 				src={props.images[currentImage]}
 				alt='Logement'
 				className={styles.carrousel__img}
 			/>
 			{hasMultipleImages && (
 				<>
-					<FontAwesomeIcon
-						icon={solid('chevron-left')}
-						className={
-							styles.carrousel__arrow + ' ' + styles.carrousel__arrowLeft
-						}
+					<button
+						aria-controls='current-carrousel-img'
+						aria-label='Image précédente'
 						onClick={() => setCurrentImage(currentImage - 1)}
-					/>
-					<span className={styles.carrousel__currentImgIndex}>
+						className={
+							styles.carrousel__arrowButton +
+							' ' +
+							styles.carrousel__arrowButtonLeft
+						}>
+						<FontAwesomeIcon icon={solid('chevron-left')} />
+					</button>
+					<span
+						className={styles.carrousel__currentImgIndex}
+						aria-label="Numéro de l'image actuelle">
 						{currentImage + 1 + '/' + props.images.length}
 					</span>
-					<FontAwesomeIcon
-						icon={solid('chevron-right')}
-						className={
-							styles.carrousel__arrow + ' ' + styles.carrousel__arrowRight
-						}
+					<button
+						aria-controls='current-carrousel-img'
+						aria-label='Image suivante'
 						onClick={() => setCurrentImage(currentImage + 1)}
-					/>
+						className={
+							styles.carrousel__arrowButton +
+							' ' +
+							styles.carrousel__arrowButtonRight
+						}>
+						<FontAwesomeIcon icon={solid('chevron-right')} />
+					</button>
 				</>
 			)}
 		</div>

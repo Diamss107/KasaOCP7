@@ -16,9 +16,16 @@ export function Collapse(props: DropdownProps) {
 		isOpenClass = styles.collapseOpen;
 	}
 
+	// TODO Commentaire à enlever
+	// La génération de l'id unique suivant est réalisé grâce à l'ajout de props.tile à un chiffre aléatoire
+	// Cela permet d'avoir un id unique pour chaque collapse
+	const descId = 'desc' + props.title + Math.floor(Math.random() * 1000);
+
 	return (
 		<div className={styles.collapse + ' ' + isOpenClass}>
-			<div
+			<button
+				aria-expanded={isOpen}
+				aria-controls={descId}
 				className={styles.collapse__header}
 				onClick={() => {
 					setIsOpen(!isOpen);
@@ -28,8 +35,10 @@ export function Collapse(props: DropdownProps) {
 					icon={solid('chevron-down')}
 					className={styles.collapse__header__icon}
 				/>
+			</button>
+			<div className={styles.collapse__desc} id={descId}>
+				{props.children}
 			</div>
-			<div className={styles.collapse__desc}>{props.children}</div>
 		</div>
 	);
 }

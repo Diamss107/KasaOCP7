@@ -3,15 +3,12 @@ import { Banner } from '../components/Banner';
 import { LocationCard } from '../components/LocationCard';
 import logements from '../data/logements.json';
 import DocumentTitle from 'react-document-title';
-import homeBanner from '../images/homeBanner.jpg';
-
-// import backgroundImg from '../images/homeBanner.jpg';
 
 export function Home() {
 	return (
 		<DocumentTitle title='Accueil'>
 			<div className={styles.home}>
-				<Banner backgroundImg={homeBanner}>
+				<Banner backgroundImgClass={styles.home__banner__img}>
 					<h1 className={styles.home__banner__title}>
 						Chez vous, partout et ailleurs
 					</h1>

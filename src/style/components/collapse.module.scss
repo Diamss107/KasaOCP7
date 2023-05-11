@@ -18,6 +18,9 @@
 	}
 
 	&__header {
+		border: none;
+		width: 100%;
+
 		position: relative;
 		z-index: 2;
 
@@ -26,13 +29,13 @@
 		align-items: center;
 		color: white;
 		background-color: $primaryColor;
-		// 50px
-		height: 3.13em;
 		border-radius: 5px;
 		padding: 0 20px;
 
 		h2 {
 			font-weight: normal;
+			font-size: 1.5em;
+			margin: 10px 0;
 		}
 
 		&:hover {
@@ -75,10 +78,9 @@
 		}
 
 		&__header {
-			// 30px
-			height: 1.9em;
 
 			h2 {
+				margin: 7px 0;
 				font-size: 0.8em;
 			}
 

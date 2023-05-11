@@ -1,11 +1,11 @@
 @import "../mixins";
 
 .apropos {
-
-	// Temporaire
 	&__banner {
 		&__img {
 			background-image: url("../../images/aproposBanner.jpg");
+			// La taille est spécifiée en dure parce que cette bannière n'a pas de texte
+			height: 223px;
 		}
 	}
 

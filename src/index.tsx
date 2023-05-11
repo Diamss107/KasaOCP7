@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { FicheLogement } from './pages/FicheLogement';
 import { Apropos } from './pages/Apropos';
+import 'normalize.css';
 import './style/base.scss';
 import { ErrorPage } from './pages/ErrorPage';
 import { Layout } from './components/Layout';

@@ -1,7 +1,13 @@
 $primaryColor: #FF6060;
-$defaultPaddingX: 6%;
+$defaultPaddingX: 7%;
 $defaultPaddingY: 40px;
-$phonePaddingX: 6%;
+$phonePaddingX: 7%;
 $phonePaddingY: 20px;
 $semiTransparentBC: rgba(black, 0.5);
 $semiTransparentBCHover: rgba(black, 0.7);
+$darkenColor: darken($primaryColor, 5%);
+$mostDarkenColor: darken($primaryColor, 100%);
+$defaultBackground: linear-gradient(to top,
+	rgba($mostDarkenColor, 1) -50%,
+	rgba($primaryColor, 1) 50%,
+	rgba($darkenColor, 1) 140%);

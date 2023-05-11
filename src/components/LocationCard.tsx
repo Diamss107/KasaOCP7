@@ -12,6 +12,8 @@ export function LocationCard(props: LocationCardProps) {
 			to={`/fichelogement/:${props.logement.id}`}
 			className={styles.card}>
 			<img
+				width={340}
+				height={340}
 				src={props.logement.cover}
 				alt='Vue du logement'
 				className={styles.card__img}

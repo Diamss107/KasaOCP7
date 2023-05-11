@@ -2,19 +2,15 @@
 @import "../mixins.scss";
 
 .card {
-	// 340px
-	$size: 21.25em;
-	$darkenColor: darken($primaryColor, 5%);
-	$mostDarkenColor: darken($primaryColor, 100%);
+	$size: 340px;
+
 
 	position: relative;
 	width: $size;
 	height: $size;
 	border-radius: 10px;
-	background: linear-gradient(to top,
-		rgba($mostDarkenColor, 1) -50%,
-		rgba($primaryColor, 1) 50%,
-		rgba($darkenColor, 1) 140%);
+	background-image: $defaultBackground;
+	background-size: cover;
 	color: white;
 	margin: 30px;
 

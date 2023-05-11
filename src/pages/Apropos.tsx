@@ -2,13 +2,12 @@ import styles from '../style/pages/apropos.module.scss';
 import { Banner } from '../components/Banner';
 import { Collapse } from '../components/Collapse';
 import DocumentTitle from 'react-document-title';
-import aproposBannerImg from '../images/aproposBanner.jpg';
 
 export function Apropos() {
 	return (
 		<DocumentTitle title='A propos'>
 			<div className={styles.apropos}>
-				<Banner backgroundImg={aproposBannerImg} />
+				<Banner backgroundImgClass={styles.apropos__banner__img} />
 				<div className={styles.apropos__infos}>
 					<Collapse title='Fiabilité'>
 						<p>
