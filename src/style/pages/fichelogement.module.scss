@@ -55,10 +55,6 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
-	&__infos > div:last-child {
-		margin-left: 75px;
-	}
 }
 
 @include for-phone-and-tablet {
@@ -98,10 +94,6 @@
 		&__infos {
 			margin-top: 5px;
 			flex-direction: column;
-		}
-
-		&__infos > div:last-child {
-			margin-left: 0;
 		}
 	}
 }

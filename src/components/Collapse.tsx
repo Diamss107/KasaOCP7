@@ -17,7 +17,7 @@ export function Collapse(props: DropdownProps) {
 	}
 
 	return (
-		<div className={styles.collapse + ' ' + isOpenClass} aria-expanded={isOpen}>
+		<div className={styles.collapse + ' ' + isOpenClass}>
 			<div
 				className={styles.collapse__header}
 				onClick={() => {
@@ -29,9 +29,7 @@ export function Collapse(props: DropdownProps) {
 					className={styles.collapse__header__icon}
 				/>
 			</div>
-			<div className={styles.collapse__desc} aria-hidden={!isOpen}>
-				{props.children}
-			</div>
+			<div className={styles.collapse__desc}>{props.children}</div>
 		</div>
 	);
 }
