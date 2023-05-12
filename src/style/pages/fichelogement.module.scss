@@ -24,14 +24,12 @@
 
 				h1 {
 					margin: 0;
-					// 36px
 					font-size: 2.25em;
 					font-weight: 500;
 				}
 
 				span {
 					margin-top: 5px;
-					// 18px
 					font-size: 1.125em;
 					font-weight: 500;
 				}
@@ -61,14 +59,9 @@
 	.ficheLogement {
 		&__header {
 			flex-direction: column;
-			// 125px
-			min-height: 7.81em;
 			height: auto;
 
 			&__titleLocationAndTags {
-				// 75px
-				min-height: 4.7em;
-
 				&__titleAndLocation {
 					h1 {
 						font-size: 1.125em;

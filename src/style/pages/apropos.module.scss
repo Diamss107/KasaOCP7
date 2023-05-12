@@ -1,9 +1,12 @@
 @import "../mixins";
 
 .apropos {
+	display: flex;
+	flex-direction: column;
+
 	&__banner {
 		&__img {
-			background-image: url("../../images/aproposBanner.jpg");
+			background-image: url("../../images/aproposBanner.webp");
 			// La taille est spécifiée en dure parce que cette bannière n'a pas de texte
 			height: 223px;
 		}

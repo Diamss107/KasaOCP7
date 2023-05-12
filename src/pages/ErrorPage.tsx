@@ -1,14 +1,12 @@
 import styles from '../style/pages/errorPage.module.scss';
 import { NavLink } from 'react-router-dom';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
 import DocumentTitle from 'react-document-title';
+import { Layout } from '../components/Layout';
 
 export function ErrorPage() {
 	return (
-		<DocumentTitle title='Page non trouvée'>
-			<>
-				<Header />
+		<Layout>
+			<DocumentTitle title='Page non trouvée'>
 				<div className={styles.error}>
 					<div className={styles.error__infos}>
 						<h1 className={styles.error__infos__title}>404</h1>
@@ -20,8 +18,7 @@ export function ErrorPage() {
 						Retourner sur la page d'accueil
 					</NavLink>
 				</div>
-				<Footer />
-			</>
-		</DocumentTitle>
+			</DocumentTitle>
+		</Layout>
 	);
 }

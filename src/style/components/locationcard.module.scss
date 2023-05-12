@@ -2,12 +2,7 @@
 @import "../mixins.scss";
 
 .card {
-	$size: 340px;
-
-
 	position: relative;
-	width: $size;
-	height: $size;
 	border-radius: 10px;
 	background-image: $defaultBackground;
 	background-size: cover;
@@ -19,8 +14,6 @@
 	overflow: hidden;
 
 	&__img {
-		width: 100%;
-		height: 100%;
 		object-fit: cover;
 	}
 

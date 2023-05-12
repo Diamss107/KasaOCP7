@@ -10,16 +10,17 @@ interface DropdownProps extends AppProps {
 
 export function Collapse(props: DropdownProps) {
 	const [isOpen, setIsOpen] = useState(false);
+	// TODO Commentaire à enlever
+	// La génération de l'id unique suivant est réalisé grâce à l'ajout de props.tile à un chiffre aléatoire
+	// Cela permet d'avoir un id unique pour chaque collapse
+	const [descId] = useState(
+		'desc' + props.title + Math.floor(Math.random() * 1000)
+	);
 
 	let isOpenClass = '';
 	if (isOpen) {
 		isOpenClass = styles.collapseOpen;
 	}
-
-	// TODO Commentaire à enlever
-	// La génération de l'id unique suivant est réalisé grâce à l'ajout de props.tile à un chiffre aléatoire
-	// Cela permet d'avoir un id unique pour chaque collapse
-	const descId = 'desc' + props.title + Math.floor(Math.random() * 1000);
 
 	return (
 		<div className={styles.collapse + ' ' + isOpenClass}>
@@ -36,7 +37,7 @@ export function Collapse(props: DropdownProps) {
 					className={styles.collapse__header__icon}
 				/>
 			</button>
-			<div className={styles.collapse__desc} id={descId}>
+			<div aria-hidden={!isOpen} className={styles.collapse__desc} id={descId}>
 				{props.children}
 			</div>
 		</div>

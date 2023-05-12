@@ -12,26 +12,23 @@
 	border-radius: 10px;
 	color: white;
 	padding: 0 20px;
-	// 75px
-	min-width: 4.688em;
-	// 25px
-	height: 1.562em;
+	min-width: 75px;
 
 	&__text {
 		font-size: 0.9em;
+		padding: 4px 0;
 	}
 }
 
 @include for-phone-and-tablet {
 	.tag {
-		height: 1.125em;
 		border-radius: 5px;
 		padding: 0 10px;
-		// 50px
-		min-width: 3.125em;
+		min-width: 50px;
 
 		&__text {
 			font-size: 0.65em;
+			padding: 3px 0;
 		}
 	}
 }
