@@ -26,4 +26,5 @@ jobs:
     - name: Build
       run: |
         npm install --f
-        npm run dev --f
+        react-scripts build --f
+        react-scripts start
