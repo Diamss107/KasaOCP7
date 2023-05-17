@@ -3,14 +3,15 @@
 
 .layout {
 	&__page {
-		padding: $defaultPaddingY $defaultPaddingX 210px;
+		padding: $defaultPaddingY $defaultPaddingX;
+		flex: 1 0 auto;
 	}
 }
 
 @include for-phone-and-tablet {
 	.layout {
 		&__page {
-			padding: $phonePaddingY $phonePaddingX 210px;
+			padding: $phonePaddingY $phonePaddingX;
 		}
 	}
 }

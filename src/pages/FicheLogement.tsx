@@ -57,10 +57,10 @@ export function FicheLogement() {
 					</div>
 				</div>
 				<div className={styles.ficheLogement__infos}>
-					<Collapse title={'Description'}>
+					<Collapse title={'Description'} profile={'secondary'}>
 						<p>{currentLogement?.description}</p>
 					</Collapse>
-					<Collapse title={'Équipement'}>
+					<Collapse title={'Équipement'} profile={'secondary'}>
 						{currentLogement?.equipments.map((equipment) => (
 							<div key={equipment}>
 								<span>{equipment}</span>

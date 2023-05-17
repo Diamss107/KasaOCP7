@@ -8,9 +8,13 @@ interface BannerProps extends AppProps {
 export function Banner(props: BannerProps) {
 	return (
 		<div className={styles.banner + ' ' + props.backgroundImgClass}>
-			{props.children && (
-				<div className={styles.banner__title}>{props.children}</div>
-			)}
+			<div className={styles.banner__background}>
+				{props.children && (
+					<div className={styles.banner__background__title}>
+						{props.children}
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }

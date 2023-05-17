@@ -2,12 +2,11 @@
 @import "../mixins";
 
 .footer {
-	position: absolute;
-	bottom: 0;
-	background-color: black;
-	color: white;
 	display: flex;
 	flex-direction: column;
+	background-color: black;
+	color: white;
+	flex-shrink: 0;
 	align-items: center;
 	justify-content: space-evenly;
 	height: 210px;
