@@ -25,33 +25,37 @@ export function Collapse(props: DropdownProps) {
 			isOpenClass += ' ' + stylesSecondary.collapseOpen;
 	}
 
-	let styles: any = {};
+	let styles: Map<string, string> = new Map<string, string>();
 
 	for (const key of Object.keys(stylesDefault)) {
-		styles[key] = stylesDefault[key];
-		if (profile === 'secondary') styles[key] += ' ' + stylesSecondary[key];
+		styles.set(key, stylesDefault[key]);
+		if (profile === 'secondary')
+			styles.set(key, styles.get(key) + ' ' + stylesSecondary[key]);
 	}
 
 	return (
-		<div className={styles.collapse + ' ' + isOpenClass}>
-			<h2 className={styles.collapse__header}>
+		<div className={styles.get('collapse') + ' ' + isOpenClass}>
+			<h2 className={styles.get('collapse__header')}>
 				<button
 					aria-expanded={isOpen}
 					aria-controls={descId}
 					onClick={() => {
 						setIsOpen(!isOpen);
 					}}
-					className={styles.collapse__header__button}>
-					<span className={styles.collapse__header__button__title}>
+					className={styles.get('collapse__header__button')}>
+					<span className={styles.get('collapse__header__button__title')}>
 						{props.title}
 						<FontAwesomeIcon
 							icon={solid('chevron-down')}
-							className={styles.collapse__header__button__title__icon}
+							className={styles.get('collapse__header__button__title__icon')}
 						/>
 					</span>
 				</button>
 			</h2>
-			<div aria-hidden={!isOpen} className={styles.collapse__desc} id={descId}>
+			<div
+				aria-hidden={!isOpen}
+				className={styles.get('collapse__desc')}
+				id={descId}>
 				{props.children}
 			</div>
 		</div>

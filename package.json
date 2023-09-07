@@ -57,6 +57,7 @@
   "devDependencies": {
     "@types/react-document-title": "^2.0.5",
     "prettier": "^2.8.8",
-    "react-document-title": "^2.0.3"
+    "react-document-title": "^2.0.3",
+    "serve": "^14.2.0"
   }
 }
