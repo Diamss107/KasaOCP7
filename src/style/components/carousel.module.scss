@@ -58,7 +58,7 @@
 @include for-phone-and-tablet {
 	.carrousel {
 		&__currentImgIndex {
-			padding: 5px 5px 10px;
+			display: none;
 		}
 
 		&__arrowButton {

@@ -1,9 +1,9 @@
 import stylesDefault from '../style/components/collapse.module.scss';
 import stylesSecondary from '../style/components/collapseSecondary.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import React, { useState } from 'react';
-import { AppProps } from '../types/globals';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {solid} from '@fortawesome/fontawesome-svg-core/import.macro';
+import React, {useState} from 'react';
+import {AppProps} from '../types/globals';
 
 interface DropdownProps extends AppProps {
 	title: string;
@@ -21,16 +21,18 @@ export function Collapse(props: DropdownProps) {
 	let isOpenClass = '';
 	if (isOpen) {
 		isOpenClass = stylesDefault.collapseOpen;
-		if (profile === 'secondary')
+		if (profile === 'secondary') {
 			isOpenClass += ' ' + stylesSecondary.collapseOpen;
+		}
 	}
 
 	let styles: Map<string, string> = new Map<string, string>();
 
 	for (const key of Object.keys(stylesDefault)) {
 		styles.set(key, stylesDefault[key]);
-		if (profile === 'secondary')
+		if (profile === 'secondary') {
 			styles.set(key, styles.get(key) + ' ' + stylesSecondary[key]);
+		}
 	}
 
 	return (
